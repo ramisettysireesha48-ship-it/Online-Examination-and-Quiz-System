@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination & Quiz System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <h1>Online Examination & Quiz System</h1>
+            <p>Test your knowledge with our online quiz.</p>
+
+            <input type="text" id="studentName" placeholder="Enter your name">
+
+            <button onclick="startExam()">Start Examination</button>
+        </div>
+
+        <!-- Exam Screen -->
+        <div id="examScreen" class="screen hidden">
+
+            <div class="exam-header">
+                <div>
+                    <h2>Online Examination</h2>
+                    <p id="welcomeText"></p>
+                </div>
+
+                <div class="timer">
+                    Time Left: <span id="timer">05:00</span>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <div class="question-box">
+
+                <p id="questionNumber"></p>
+
+                <h3 id="question"></h3>
+
+                <div id="options"></div>
+
+            </div>
+
+            <div class="buttons">
+                <button id="previousBtn" onclick="previousQuestion()">
+                    Previous
+                </button>
+
+                <button id="nextBtn" onclick="nextQuestion()">
+                    Next
+                </button>
+
+                <button id="submitBtn" onclick="submitExam()">
+                    Submit Exam
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Result Screen -->
+        <div id="resultScreen" class="screen hidden">
+
+            <h1>Examination Result</h1>
+
+            <p id="resultName"></p>
+
+            <div class="score">
+                <h2 id="scoreText"></h2>
+            </div>
+
+            <p id="resultMessage"></p>
+
+            <button onclick="restartExam()">Take Exam Again</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
